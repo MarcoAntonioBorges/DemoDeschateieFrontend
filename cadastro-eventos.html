@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cadastro Eventos</title>
+
+
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body class="bg">
+
+  <header>
+    <section class="container-fluid  ">
+      <div class="d-flex flex-row align-items-center justify-content-between">
+        <div class="logo flex-fill"><img src="images/logo.png"> </div>
+        <nav class="menu d-flex flex-row align-items-start flex-fill">
+          <div>
+            <a href="cadastro-eventos.html" class="active">Cadastar eventos</a>
+          </div>
+          <div>
+            <a href="lista-eventos.html">Lista de Eventos</a>
+          </div>
+        </nav>
+
+        <div class="avatar d-flex flex-row align-items-center justify-content-end flex-fill ">
+          <span class="mr-4">Olá, User</span>
+         
+          <div class="avatar ">
+            <img src="images/user.png">
+          </div>
+        </div>
+    </section>
+  </header>
+
+
+  <section class="container">
+    <div class="row d-flex align-items-center justify-content-center ">
+      <div class="col-md-8 col-sm-8 col-lg-8 ">
+        <div class="widget">
+          <div class="header">
+            <h1>
+              Cadastro de Eventos
+            </h1>
+            <p></p>
+          </div>
+
+          <div class="form-area">
+            <form>
+
+              <div class="row">
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Nome</label>
+                  <input type="text" name="nome" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Descrição</label>
+                  <textarea type="text" name="descricao" class="form-control" aria-describedby="emailHelp"
+                    rows=3></textarea>
+                </div>
+
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Capacidade</label>
+                  <input type="number" name="capacidade" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="exampleInputEmail1">Data Inicio</label>
+                  <input type="date" name="capacidade" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label for="exampleInputEmail1">Data Final</label>
+                  <input type="date" name="capacidade" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="ml-3 mb-4 form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Gratuito
+                  </label>
+                </div>
+              </div>
+
+
+              <button type="submit" class="btn btn-primary btn-block btn-enviar">Cadastrar</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+</body>
+
+</html>

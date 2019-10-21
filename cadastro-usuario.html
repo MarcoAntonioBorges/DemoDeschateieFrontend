@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cadastro de Usuario</title>
+
+
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body class="bg">
+
+    <header>
+        <section class="container-fluid  ">
+          <div class="d-flex flex-row align-items-center justify-content-between">
+            <div class="logo"><img src="images/logo.png"> </div>
+            <nav>
+              <a href="index.html" class="c-button">Login</a>
+            </nav>
+          </div>
+        </section>
+      </header>
+
+
+  <section class="container">
+    <div class="row d-flex align-items-center justify-content-center ">
+      <div class="col-md-8 col-sm-8 col-lg-8 ">
+        <div class="widget">
+          <div class="header">
+            <h1>
+              Cadastre-se
+            </h1>
+            <p></p>
+          </div>
+
+          <div class="form-area">
+            <form id="form-cadastrar-usuario" method="post">
+
+              <div class="row">
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Nome</label>
+                  <input type="text" name="nome" class="form-control" >
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" name="email" class="form-control" >
+                  </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Data de nascimento</label>
+                  <input type="date" name="dataNascimento" class="form-control" >
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Genero</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Selecionar</option>
+                    <option>MASCULINO</option>
+                    <option>FEMININO</option>
+                    <option>OUTROS</option>
+                  </select>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label for="exampleInputEmail1">login</label>
+                    <input type="text" name="login" class="form-control" >
+                  </div>
+                  <div class="col-sm-12 form-group">
+                      <label for="exampleInputEmail1">senha</label>
+                      <input type="password" name="senha" class="form-control" >
+                    </div>
+               
+                
+              </div>
+
+
+              <button type="submit" class="btn btn-primary btn-block btn-enviar" id="cadastrar-usuario">Cadastrar</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="./js/form-cadastrar-usuario.js"></script>
+</body>
+
+</html>
