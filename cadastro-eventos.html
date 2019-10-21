@@ -29,7 +29,7 @@
         </nav>
 
         <div class="avatar d-flex flex-row align-items-center justify-content-end flex-fill ">
-          <span class="mr-4">Olá, User</span>
+          <span class="mr-4" id="user">Olá, User</span>
          
           <div class="avatar ">
             <img src="images/user.png">
@@ -51,7 +51,7 @@
           </div>
 
           <div class="form-area">
-            <form>
+            <form id="form-cadastro-evento" method="submit">
 
               <div class="row">
                 <div class="col-sm-12 form-group">
@@ -63,7 +63,10 @@
                   <textarea type="text" name="descricao" class="form-control" aria-describedby="emailHelp"
                     rows=3></textarea>
                 </div>
-
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Tipo do evento</label>
+                  <input type="text" name="tipo" class="form-control" aria-describedby="emailHelp">
+                </div>
                 <div class="col-sm-12 form-group">
                   <label for="exampleInputEmail1">Capacidade</label>
                   <input type="number" name="capacidade" class="form-control" aria-describedby="emailHelp">
@@ -82,10 +85,46 @@
                     Gratuito
                   </label>
                 </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">UF</label>
+                  <input type="text" name="uf" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Complemento</label>
+                  <input type="text" name="complemento" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Numero</label>
+                  <input type="text" name="numero" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Url da imagem</label>
+                  <input type="text" name="foto" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">CEP</label>
+                  <input type="text" name="cep" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Logradouro</label>
+                  <input type="text" name="logradouro" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">País</label>
+                  <input type="text" name="pais" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Bairro</label>
+                  <input type="text" name="bairro" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="col-sm-12 form-group">
+                  <label for="exampleInputEmail1">Cidade</label>
+                  <input type="text" name="cidade" class="form-control" aria-describedby="emailHelp">
+                </div>
               </div>
 
 
-              <button type="submit" class="btn btn-primary btn-block btn-enviar">Cadastrar</button>
+              <button type="submit" id="btn-cadastrar-evento" class="btn btn-primary btn-block btn-enviar">Cadastrar</button>
 
             </form>
           </div>
@@ -97,8 +136,32 @@
 
 
 
-
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="js/form-cadastro-evento.js"></script>
 </body>
 
 </html>
+
+<!--
+
+0: {campo: "uf", erro: "não pode ser nulo"}
+1: {campo: "complemento", erro: "não pode ser nulo"}
+2: {campo: "dataInicio", erro: "não pode ser nulo"}
+3: {campo: "numero", erro: "não pode ser nulo"}
+4: {campo: "dataFim", erro: "não pode ser nulo"}
+5: {campo: "foto", erro: "não pode ser nulo"}
+6: {campo: "cep", erro: "não pode ser nulo"}
+7: {campo: "logradouro", erro: "não pode ser nulo"}
+8: {campo: "pais", erro: "não pode ser nulo"}
+9: {campo: "bairro", erro: "não pode ser nulo"}
+10: {campo: "cidade", erro: "não pode ser nulo"}
+11: {campo: "tipo", erro: "não pode ser nulo"}
+12: {campo: "capacidade", erro: "não pode ser nulo"}
+
+-->

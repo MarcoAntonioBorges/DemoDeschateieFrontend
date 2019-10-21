@@ -38,26 +38,32 @@ function montarListaEventos(lista) {
     console.log(lista);
     let listaElement = $('#lista-eventos');
     
+    lista.content.forEach(element => {
+        listaElement.append(elementEvento(element.nome, element.descricao, element.dataInicio));
+    });
+
 }
 
-function elementEvento(){
-  //   var evento = "<div class="d-flex card-evento"> <div class="flex-grow-1">
-  //     <a href="evento.html">
-  //       <h3>Nome do Evento</h3>
-  //     </a>
-  //     <p>Descrição do Evento</p>
-  //     <span>10/11/2019</span>
-  //   </div>
-  //   <div class="manager flex-grow-2 d-flex  align-items-center ">
-  //     <div>
-  //       <a href="#"> <img src="images/edit.png" alt="editar evento" title="editar evento"> </a>
-  //     </div>
-  //     <div>
-  //       <div> <a href="#">
-  //           <img src="images/cross.png" alt="excluir evento" title="excluir evento"></a>
-  //       </div>
-  //     </div>
-  //   </div>
-  // </div>"
+function elementEvento(nome, descricao, dataInicio){
+    var evento = `<div class='d-flex card-evento'> <div class='flex-grow-1'>
+      <a href='evento.html'>
+        <h3>${nome}</h3>
+      </a>
+      <p>${descricao}</p>
+      <span>${dataInicio[2]}/${dataInicio[1]}/${dataInicio[0]}</span>
+    </div>
+    <div class='manager flex-grow-2 d-flex  align-items-center '>
+      <div>
+        <a href='#'> <img src='images/edit.png' alt='editar evento' title='editar evento'> </a>
+      </div>
+      <div>
+        <div> <a href='#'>
+            <img src='images/cross.png' alt='excluir evento' title='excluir evento'></a>
+        </div>
+      </div>
+    </div>
+  </div>`
 
+
+    return evento
 }
