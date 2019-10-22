@@ -2,6 +2,7 @@ const API_CADASTRO_EVENTO = "https://deschateie.herokuapp.com/eventos";
 const FORM = $('#form-cadastro-evento').submit(cadastrar);
 const USER_INPUT = $('#user');
 var USER;
+var AA;
 
 $(window).ready(function(){
     USER = JSON.parse(sessionStorage.getItem('user'));
@@ -82,4 +83,45 @@ function cadastrar(e){
 
 
     $('#form-cadastro-evento')[0].reset();
+}
+
+$('#cep').change(function(){
+    let cep = $('#cep')[0];
+    if(cep.value.length == 8){
+        //https://viacep.com.br/ws/06824140/json/unicode/?callback=endereco
+        $.ajax({
+            url : `https://viacep.com.br/ws/${cep.value}/json/`,
+            type : 'get',
+            contentType: "application/json"
+        ,beforeSend : function(){
+            console.log('Enviando...');
+        }}).done(function(msg){
+                console.log(msg);
+                montarEndereco(msg);
+        }).fail(function(jqXHR, textStatus, msg){
+                console.log(msg);
+                Swal.fire({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'Algo deu errado!'
+                  })
+        });
+    }else if(cep.value.length > 8){
+        Swal.fire({
+            type: 'info',
+            title: 'Oops...',
+            text: 'CEP Inválido ou formatação inválida, lembre-se sem pontuações.'
+          })
+    }
+})
+
+function montarEndereco(endereco){
+    console.log(endereco);
+    AA = endereco;
+    let form = $('#form-cadastro-evento');
+    form[0].logradouro.value = endereco.logradouro;
+    form[0].cidade.value = endereco.localidade;
+    form[0].uf.value = endereco.uf;
+    form[0].bairro.value = endereco.bairro;
+    form[0].complemento.value = endereco.complemento;
 }

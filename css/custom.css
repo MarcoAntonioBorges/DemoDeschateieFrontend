@@ -123,6 +123,56 @@ label {
   color: #fff;
 }
 
+.data{
+  color: lightslategray;
+  width: 50%;
+  padding: 15px;
+  margin: 5px;
+}
 .data span{
   font-weight: 700;
+}
+
+.descricao{
+  padding: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  width: 80%;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5e5e5e;
+}
+
+.tipos{
+  width: 50%;
+  padding: 15px;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+.tipos span{
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  text-align: center;
+}
+
+.capacidade{
+  width: 50%;
+  padding: 15px;
+  margin: 5px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5e5e5e;
+}
+
+.capacidade span{
+  font-weight: bolder;
 }
