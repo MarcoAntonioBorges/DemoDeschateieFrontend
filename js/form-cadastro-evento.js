@@ -16,29 +16,31 @@ function autenticar(usuario) {
 
 function cadastrar(e){
     e.preventDefault();
+    let form = $('#form-cadastro-evento');
 
-    let nome = e.currentTarget[0].value;
-    let descricao = e.currentTarget[1].value;
+    let nome = form[0].nome.value;
+    let descricao = form[0].descricao.value;
     var tipo = "TECNOLOGIA";
     if(e.currentTarget[2].value == "TECNOLOGIA"){
-        tipo = e.currentTarget[2].value;
+        tipo = form[0].tipo.value;
     }
-    let capacidade = e.currentTarget[3].value;
-    let dataInicio = e.currentTarget[4].value;
-    let dataFinal = e.currentTarget[5].value;
+    let capacidade = form[0].capacidade.value;
+    let dataInicio = form[0].dataInicio.value;
+    let dataFinal = form[0].dataFinal.value;
     console.log(e.currentTarget[6]);
-    let uf = e.currentTarget[7].value;
-    let complemento = e.currentTarget[8].value;
-    let numero = e.currentTarget[9].value;
-    let foto = e.currentTarget[10].value;
-    let cep = e.currentTarget[11].value;
+    let uf = form[0].uf.value;
+    let complemento = form[0].complemento.value;
+    let numero = form[0].numero.value;
+    let foto = form[0].foto.value;
+    console.log(e.currentTarget[10].value);
+    let cep = form[0].cep.value;
     var logradouro = "RUA";
     if(e.currentTarget[12].value == "RUA" || e.currentTarget[12].value == "AVENIDA" || e.currentTarget[12].value == "VIELA"){
-        logradouro = e.currentTarget[12].value;
+        logradouro = form[0].logradouro.value;
     }
-    let pais = e.currentTarget[13].value;
-    let bairro = e.currentTarget[14].value;
-    let cidade = e.currentTarget[15].value;
+    let pais = form[0].pais.value;
+    let bairro = form[0].bairro.value;
+    let cidade = form[0].cidade.value;
  
     console.log(FORM);
 
