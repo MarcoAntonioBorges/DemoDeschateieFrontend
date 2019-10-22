@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Nome do evento</title>
+  <title>Evento</title>
 
 
   <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
@@ -43,19 +43,19 @@
       <div class="col-12 ">
         <div class="widget">
           <div class="header">
-            <h1>
-              Nome do evento
+            <h1 id="nome">
+              
             </h1>
           </div>
           <div class="d-flex">
             <div class="flex-grow-1">
-              <div class="data"><span>10/12 - 22/12</span></div>
+              <div class="data"><span id="dataInicio"></span><span id="dataFim"></span></div>
               <div>
-                <p> Descrição do evento</p>
+                <p id="descricao"></p>
               </div>
               <div class="tipos">
-                <span style=" background: #ff7e7e">tipo</span>
-                <span style=" background: #6cbf41">gratuito</span>
+                <span style=" background: #ff7e7e" id="tipo"></span>
+                <span style=" background: #6cbf41" id="isGratuito">gratuito</span>
               </div>
             </div>
             <div>

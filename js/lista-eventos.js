@@ -75,9 +75,9 @@ async function descricaoEvento(codigo){
   let evento = await buscarEvento(codigo);
   console.log(evento);
   
-  dela
+  
 
-  window.location.href="../evento.html";
+  setTimeout(function(){window.location.href="../evento.html"}, 5000);
 }
 
 function buscarEvento(codigo){

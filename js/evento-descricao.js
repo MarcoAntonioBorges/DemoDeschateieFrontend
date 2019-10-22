@@ -5,8 +5,7 @@ const EVENTO = JSON.parse(sessionStorage.getItem('evento'));
 $(window).ready(function(){
     autenticar(USER);
     USER_INPUT.text('Olá, ' + USER.nome);
-    console.log(EVENTO);
-    
+    montarEventos(EVENTO);    
 });
 
 function autenticar(usuario) { 
@@ -15,3 +14,10 @@ function autenticar(usuario) {
 
 
 
+function montarEventos(evento){
+    console.log($("#nome"));
+    $("#nome")[0].textContent = evento.nome;
+    $("#descricao")[0].textContent = evento.descricao;
+    $("#dataInicio")[0].textContent = evento.dataInicio;
+    $("#dataFim")[0].textContent = evento.dataFim;
+}
