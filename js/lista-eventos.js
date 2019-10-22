@@ -39,14 +39,15 @@ function montarListaEventos(lista) {
     let listaElement = $('#lista-eventos');
     
     lista.content.forEach(element => {
-        listaElement.append(elementEvento(element.nome, element.descricao, element.dataInicio));
+        listaElement.append(elementEvento(element.codigo, element.nome, element.descricao, element.dataInicio));
     });
 
 }
 
-function elementEvento(nome, descricao, dataInicio){
-    var evento = `<div class='d-flex card-evento'> <div class='flex-grow-1'>
-      <a href='evento.html'>
+function elementEvento(codigo, nome, descricao, dataInicio){
+    var evento = `<div class='d-flex card-evento' onclick="descricaoEvento(${codigo})"> <div class='flex-grow-1'>
+    <span value=${codigo} id="codigo">  
+    <a>
         <h3>${nome}</h3>
       </a>
       <p>${descricao}</p>
@@ -66,4 +67,36 @@ function elementEvento(nome, descricao, dataInicio){
 
 
     return evento
+}
+
+async function descricaoEvento(codigo){
+  console.log(codigo);
+
+  let evento = await buscarEvento(codigo);
+  console.log(evento);
+  
+  dela
+
+  window.location.href="../evento.html";
+}
+
+function buscarEvento(codigo){
+  $.ajax({
+    url : API_LISTA_EVENTOS + codigo,
+    type : 'get',
+    contentType: "application/json",
+    beforeSend : function(){
+    console.log('Enviando...');
+}}).done(function(msg){
+        console.log(msg);
+        sessionStorage.setItem('evento', JSON.stringify(msg));
+        return msg;
+    }).fail(function(jqXHR, textStatus, msg){
+        console.log(msg);
+        Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Erro ao carregar!'
+          })
+});
 }
