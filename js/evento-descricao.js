@@ -15,7 +15,7 @@ function autenticar(usuario) {
 
 
 function montarEventos(evento){
-    console.log($("#nome"));
+    console.log(evento);
     $("#nome")[0].textContent = evento.nome;
     $("#descricao")[0].textContent = evento.descricao;
     $("#dataInicio")[0].textContent = formataData(evento.dataInicio);

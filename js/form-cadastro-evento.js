@@ -19,7 +19,10 @@ function cadastrar(e){
 
     let nome = e.currentTarget[0].value;
     let descricao = e.currentTarget[1].value;
-    let tipo = e.currentTarget[2].value;
+    var tipo = "TECNOLOGIA";
+    if(e.currentTarget[2].value == "TECNOLOGIA"){
+        tipo = e.currentTarget[2].value;
+    }
     let capacidade = e.currentTarget[3].value;
     let dataInicio = e.currentTarget[4].value;
     let dataFinal = e.currentTarget[5].value;
@@ -29,7 +32,10 @@ function cadastrar(e){
     let numero = e.currentTarget[9].value;
     let foto = e.currentTarget[10].value;
     let cep = e.currentTarget[11].value;
-    let logradouro = e.currentTarget[12].value;
+    var logradouro = "RUA";
+    if(e.currentTarget[12].value == "RUA" || e.currentTarget[12].value == "AVENIDA" || e.currentTarget[12].value == "VIELA"){
+        logradouro = e.currentTarget[12].value;
+    }
     let pais = e.currentTarget[13].value;
     let bairro = e.currentTarget[14].value;
     let cidade = e.currentTarget[15].value;
